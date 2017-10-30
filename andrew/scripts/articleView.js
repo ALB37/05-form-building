@@ -126,6 +126,7 @@ articleView.create = () => {
 // COMMENTED: Where is this function called? Why?
 // This function is called on the index.html page because this is the set of events which must happen on page load for that page.
 articleView.initIndexPage = () => {
+  hljs.initHighlightingOnLoad();
   articles.forEach(article => $('#articles').append(article.toHtml())); //eslint-disable-line
   articleView.populateFilters();
   articleView.handleCategoryFilter();
